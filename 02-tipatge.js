@@ -17,7 +17,7 @@ let variableIndefinida
 //Null
 let valorNull = null
 
-//Symbol
+//Symbol (crea identificadors únics)
 let mySymbol = Symbol("mysymbol")
 
 //BigInt
