@@ -90,3 +90,8 @@ console.log(copiedObject)
 
 // 10. Combina desestructuraciÃ³n y propagaciÃ³n.
 
+let numbers = [100, 200, 300, 400, 500]
+let [num1, num2, ...rest] = numbers
+console.log(num1)
+console.log(num2)
+console.log(rest)

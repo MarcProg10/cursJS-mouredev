@@ -90,7 +90,7 @@ let myArray2 = [...myArray] //copia
 console.log(myArray2)
 
 let myArray3 = [...myArray, 6] //copia afegint contingut
-
+console.log("combinació")
 console.log(myArray3)
 
 //combinació d'arrays
