@@ -112,3 +112,60 @@ console.log(persona6.getName)
 console.log(persona6.getBank)
 persona6.newBank = "IBAN9999" //atenció a com modificar
 console.log(persona6.getBank)
+
+// Herencia
+
+class Animal {
+    
+    constructor(name){
+        this.name = name
+    }
+
+    sound(){
+        console.log("Emite un sonido genérico")
+    }
+}
+
+class Dog extends Animal {
+    
+    sound(){
+        console.log("Guau")
+    }
+    
+    run(){
+        console.log("El perro corre")
+    }
+}
+
+class Fish extends Animal {
+    
+    constructor(name, size){
+        super(name)
+        this.size = size
+    }
+    
+    swim(){
+        console.log("El pez nada")
+    }
+}
+
+let myDog = new Dog("Leia")
+myDog.run()
+myDog.sound()
+
+let myFish = new Fish("Nemo", 10)
+myFish.swim()
+myFish.sound()
+
+//mètodes estàtics
+
+class MathOperations{
+    
+    static sum(a,b){ //evitar la necessitat d'instanciar, útil per a utilitats
+        return a + b
+    }
+}
+
+console.log(MathOperations.sum(2,3))
+
+
