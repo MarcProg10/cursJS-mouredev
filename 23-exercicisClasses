@@ -1,0 +1,122 @@
+// 1. Crea una clase que reciba dos propiedades.
+
+class Car{
+    
+    constructor(brand, color){
+        this.brand = brand,
+        this.color = color
+    }
+}
+
+// 2. AÃ±ade un mÃ©todo a la clase que utilice las propiedades.
+
+class CarWithMethod{
+    
+    constructor(brand, color){
+        this.brand = brand,
+        this.color = color
+    }
+
+    run(){
+        console.log("El cotxe es mou")
+    }
+}
+
+// 3. Muestra los valores de las propiedades e invoca a la funciÃ³n.
+
+let car = new CarWithMethod("Ferrari", "red")
+console.log(car.brand)
+console.log(car.color)
+car.run()
+
+// 4. AÃ±ade un mÃ©todo estÃ¡tico a la primera clase.
+
+class AdvancedCar{
+
+    constructor(brand, color, maxSpeed){
+        this.brand = brand,
+        this.color = color,
+        this.maxSpeed = maxSpeed
+
+    }
+
+    run(){
+        console.log("El cotxe es mou")
+    }
+
+    static kmhToMph(km){
+        return km * 0.621371
+    }
+}
+
+// 5. Haz uso del mÃ©todo estÃ¡tico.
+
+let car2 = new AdvancedCar("Mclaren", "orange", 350)
+console.log(AdvancedCar.kmhToMph(350))
+
+// 6. Crea una clase que haga uso de herencia.
+
+class Vehicle{
+
+    constructor(brand, color){
+        this.brand = brand,
+        this.color = color
+    }
+
+    claxon(){
+        console.log("Moc moc")
+    }
+
+    drive(){
+        console.log("El vehicle s'està movent")
+    }
+}
+
+class Motorcycle extends Vehicle{
+
+    riding(){
+        console.log("La moto s'està movent")
+    }
+
+    claxon(){
+        console.log("Pip pip")
+    }
+}
+
+// 7. Crea una clase que haga uso de getters y setters.
+
+class Person{
+
+    #dni
+    constructor(name, dni, age){
+        this.name = name,
+        this.#dni = dni,
+        this.age = age
+    }    
+
+    get getDni(){
+        return this.#dni
+    }
+
+    set setDni(newDni){
+        this.#dni = newDni
+    }   
+}
+
+// 8. Modifica la clase con getters y setters para que use propiedades privadas.
+
+//fet a l'anterior
+
+// 9. Utiliza los get y set y muestra sus valores.
+
+let person = new Person("Marc", "1234568789W", 32)
+console.log(person.getDni)
+console.log(person.name)
+console.log(person.age)
+
+// 10. Sobrescribe un mÃ©todo de una clase que utilice herencia.
+
+//fet en el 6
+
+let moto = new Motorcycle("Ducati", "Red")
+console.log(moto.claxon())
